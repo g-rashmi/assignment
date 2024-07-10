@@ -20,7 +20,7 @@ const ChallengeCard = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get(`http://localhost:500/user/${id}`);
+        const response = await axios.get(`https://assignment-i4ip.onrender.com/user/${id}`);
         const userData = response.data;
         setDay(userData.day);
         setGoal(userData.goal);
@@ -38,7 +38,7 @@ const ChallengeCard = () => {
     const interval = setInterval(async () => {
       try {
         const response = await axios.post(
-          `http://localhost:500/user/:${id}/tune`,
+          `https://assignment-i4ip.onrender.com/user/:${id}/tune`,
           { tune }
         );
         const userData = response.data;

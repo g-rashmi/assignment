@@ -19,7 +19,7 @@ export default function SignIn() {
     }
 
     try {
-      const response = await axios.post('http://localhost:500/signup', { email });
+      const response = await axios.post('https://assignment-i4ip.onrender.com/signup', { email });
       const data = response.data;
 
       if (response.status === 201 || response.status === 200) {
