@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/tokens").then(()=>{console.log("mongodb connected")});
+mongoose.connect(process.env. MONGODB_URI||"mongodb://127.0.0.1:27017/tokens").then(()=>{console.log("mongodb connected")});
 
 // Signup Route
 app.post('/signup', async (req, res) => {
